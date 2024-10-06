@@ -33,10 +33,13 @@
                         <img src="/images/icons/globe-icon.svg" alt="" />
                         <span>English</span>
                     </button>
-                    <ul class="hidden">
+                    <Dropdown>
+                        <div>Hello</div>
+                    </Dropdown>
+                    <!-- <ul class="hidden">
                         <li><a href="#">Bangla</a></li>
                         <li><a href="#">English</a></li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <ul class="flex items-center gap-5">
                     <li>
@@ -63,6 +66,7 @@
 </template>
 
 <script>
+import Dropdown from "@/Components/Dropdown.vue";
 import Input from "../ui/Input.vue";
 
 export default {

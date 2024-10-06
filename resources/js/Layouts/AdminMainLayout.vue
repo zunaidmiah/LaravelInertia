@@ -1,10 +1,13 @@
 <template>
-    <Header />
-    <Sidebar />
-    <div class="w-full">
-        <main class="py-5 px-7">
-            <slot/>
-        </main>
+    <div class="flex">
+        <Sidebar />
+
+        <div class="w-full">
+            <Header />
+            <main>
+                <slot/>
+            </main>
+        </div>
     </div>
 </template>
 
