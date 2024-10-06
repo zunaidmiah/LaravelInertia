@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { Link } from '@inertiajs/vue3';
+</script>
+
 <template>
     <aside class="bg-white border-r border-[#E4E7EC] w-[300px] h-screen p-6">
         <div class="h-full">
@@ -8,7 +12,7 @@
                 <div class="flex flex-col justify-between h-[90%]">
                     <ul class="flex flex-col gap-3 mt-10">
                         <li>
-                            <link href="/admin/dashboard"
+                            <Link href="/admin/dashboard"
                                 class="flex gap-3 items-center font-semibold text-dark"
                             >
                                 <img
@@ -16,10 +20,10 @@
                                     alt="Dashboard Icon"
                                 />
                                 <span>Dashboard</span>
-                            </link>
+                            </Link>
                         </li>
                         <li>
-                            <link
+                            <Link
                                 href="/admin/zone"
                                 class="flex gap-3 items-center font-semibold text-dark"
                             >
@@ -28,7 +32,7 @@
                                     alt=""
                                 />
                                 <span>Manage Zone</span>
-                            </link>
+                            </Link>
                         </li>
                     </ul>
                     <ul class="flex flex-col gap-3">

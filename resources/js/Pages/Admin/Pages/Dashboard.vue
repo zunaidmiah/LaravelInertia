@@ -1,24 +1,22 @@
-<template>
-    <Header />
-    <Sidebar />
-    <div class="w-full">
-        <main class="py-5 px-7">
-            <div>
-                <p>I'm from a dashboard content!</p>
-            </div>
-        </main>
-    </div>
-</template>
-
-<script>
-    import Sidebar from "../Layouts/Sidebar.vue";
-    import Header from "../Layouts/Header.vue";
-
-    export default {
-        name: "App",
-        components: {
-            Sidebar,
-            Header,
-        },
-    };
+<script setup>
+import AdminMainLayout from '@/Layouts/AdminMainLayout.vue';
+import { Head } from '@inertiajs/vue3';
 </script>
+
+<template>
+    <Head title="Dashboard" />
+
+    <AdminMainLayout>
+       <div class="py-12">
+            <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div
+                    class="overflow-hidden bg-white shadow-sm sm:rounded-lg"
+                >
+                    <div class="p-6 text-gray-900">
+                        From Dashboard
+                    </div>
+                </div>
+            </div>
+        </div>
+    </AdminMainLayout>
+</template>
