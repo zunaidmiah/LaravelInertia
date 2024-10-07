@@ -5,21 +5,21 @@
         <div class="w-full">
             <Header />
             <main>
-                <slot/>
+                <slot />
             </main>
         </div>
     </div>
 </template>
 
 <script>
-    import Sidebar from "../Pages/Admin/Layouts/Sidebar.vue";
-    import Header from "../Pages/Admin/Layouts/Header.vue";
+import Sidebar from "../Pages/Admin/Layouts/sidebar/Sidebar.vue";
+import Header from "../Pages/Admin/Layouts/Header.vue";
 
-    export default {
-        name: "App",
-        components: {
-            Sidebar,
-            Header,
-        },
-    };
+export default {
+    name: "App",
+    components: {
+        Sidebar,
+        Header,
+    },
+};
 </script>
