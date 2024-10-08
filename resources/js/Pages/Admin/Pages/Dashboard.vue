@@ -3,6 +3,8 @@ import AdminMainLayout from "@/Layouts/AdminMainLayout.vue";
 import { Head } from "@inertiajs/vue3";
 import Select from "primevue/select";
 import Chart from "primevue/chart";
+import DataTable from "primevue/datatable";
+import Column from "primevue/column";
 </script>
 
 <template>
@@ -148,6 +150,86 @@ import Chart from "primevue/chart";
                     </div>
                 </div>
             </div>
+
+            <div class="mt-5">
+                <div class="grid grid-cols-3 gap-5">
+                    <div
+                        class="col-span-2 w-full bg-white p-4 rounded-md shadow-sm"
+                    >
+                        <h2 class="text-xl font-bold">Recent Sales</h2>
+
+                        <DataTable
+                            :value="dummyData"
+                            :paginator="true"
+                            :rows="5"
+                            :selectionMode="multiple"
+                            class="mt-5"
+                        >
+                            <Column
+                                field="id"
+                                header="ID"
+                                ortable
+                                filter
+                            ></Column>
+                            <Column
+                                field="name"
+                                header="Name"
+                                ortable
+                                filter
+                            ></Column>
+                            <Column
+                                field="quantity"
+                                header="Quantity"
+                                ortable
+                                filter
+                            ></Column>
+                            <Column
+                                field="amount"
+                                header="Amount"
+                                ortable
+                                filter
+                            ></Column>
+                        </DataTable>
+                    </div>
+                    <div class="bg-white p-4 rounded-md shadow-sm gap-20">
+                        <h2 class="text-xl font-bold">Top Products</h2>
+                        <div class="h-full flex items-center">
+                            <DataTable
+                                :value="dummyData"
+                                :rows="5"
+                                :selectionMode="multiple"
+                                :totalRecords="5"
+                                class="mt-5"
+                            >
+                                <Column
+                                    field="id"
+                                    header="ID"
+                                    ortable
+                                    filter
+                                ></Column>
+                                <Column
+                                    field="name"
+                                    header="Name"
+                                    ortable
+                                    filter
+                                ></Column>
+                                <Column
+                                    field="quantity"
+                                    header="Quantity"
+                                    ortable
+                                    filter
+                                ></Column>
+                                <Column
+                                    field="amount"
+                                    header="Amount"
+                                    ortable
+                                    filter
+                                ></Column>
+                            </DataTable>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </AdminMainLayout>
 </template>
@@ -201,6 +283,15 @@ export default {
                 { name: "San Antonio", value: "San Antonio" },
             ],
             selectedCity: null,
+            dummyData: [
+                { id: 1, name: "Mobile", quantity: 30, amount: "$344" },
+                { id: 2, name: "Charger", quantity: 3, amount: "$344" },
+                { id: 3, name: "Chikon pin", quantity: 10, amount: "$44" },
+                { id: 4, name: "Laptop", quantity: 4, amount: "$34" },
+                { id: 5, name: "iPhen", quantity: 32, amount: "$3404" },
+                { id: 6, name: "Mobile", quantity: 20, amount: "$344" },
+                { id: 7, name: "Dhuru", quantity: 32, amount: "$3442" },
+            ],
         };
     },
 };
