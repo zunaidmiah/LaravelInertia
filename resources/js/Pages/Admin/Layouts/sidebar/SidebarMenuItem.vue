@@ -27,7 +27,6 @@
                     <i :class="item.icon" class="text-gray-500"></i>
                 </span>
                 <span>{{ item.name }}</span>
-                <span>{{ item.name }}</span>
                 <button class="ml-auto">
                     <i
                         class="text-xs"
